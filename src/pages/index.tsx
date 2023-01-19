@@ -53,12 +53,13 @@ const Home: NextPage = () => {
         <div className={styles.fullPageContainer}>
 
           <section className={styles.container}>
-            <div>
+            <div className={styles.introContainer}>
             <h1 className={styles.title}>
               Phillip <span className={styles.whiteSpan}>Anerine</span>
             </h1>
-            {/* <img src={'/images/downarrow.png'} className="h-1 w-1"/> */}
-            <button onClick={()=>handleScroll('section-2')}>Hello</button>
+            <img onClick={()=>handleScroll('section-2')} src={'/images/downarrow.png'} className={styles.downarrow}/>
+            
+            {/* <button onClick={()=>handleScroll('section-2')}>Hello</button> */}
             </div>
           </section>
           
@@ -66,6 +67,22 @@ const Home: NextPage = () => {
           <section className={styles.container} id='section-2'>
               <div className={styles.redbox}>
                 <h2 className={styles.title}>About me</h2>
+                <div className={styles.profileContainer}>
+                  <img src={'/images/panerine.jpg'} className={styles.headshot} alt="Headshot of Phillip Anerine"/>
+                  <p className={styles.bio}>Hello! I am a 3/4 Computer Science Major studying at Stevens Institute of Technology.
+                        I'm from Garfield, NJ, and I'm an aspiring Software Engineer with lots of experience in web development, working
+                        on both front-end and back-end. I am a highly motivated self-starter, and am always looking for new opportunities 
+                        to gain new experiences. You can look at some of my projects <a> here. </a>
+                        </p>
+                  </div>
+                  <img onClick={()=>handleScroll('section-3')} src={'/images/downarrow.png'} className={styles.downarrow}/>
+                  {/* <button onClick={()=>handleScroll('section-3')}>Hello</button> */}
+              </div>
+          </section>
+
+          <section className={styles.container} id='section-3'>
+              <div className={styles.redbox}>
+                <h2 className={styles.title}>My Tech Stack</h2>
                 <div className={styles.profileContainer}>
                   <img src={'/images/panerine.jpg'} className={styles.headshot} alt="Headshot of Phillip Anerine"/>
                   <p className={styles.bio}>Hello! I am a 3/4 Computer Science Major studying at Stevens Institute of Technology.
